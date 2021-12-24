@@ -1,0 +1,47 @@
+#haha
+{
+	display: inline-flex;
+    background-color: #d3d3d3;
+    
+    border-radius: 30px;
+    flex-direction: column;
+    align-items: center;
+}
+.x1
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin: 5px 5px 5px 5px;
+}
+.x1 input
+{
+    width:  80%;
+    height: 25px;
+    outline: none;
+}
+.x1 select
+{
+    width:  82%;
+    height: 30px;
+    outline: none;
+}
+#add
+{
+    width: 82%;
+    text-align: center;
+    border-radius: 5px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px 5px 10px 5px;
+    background-color: #ff3434;
+    color: white;
+}
+#add:hover
+{
+    cursor: pointer;
+}
+

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="./xd.css">
+	<title></title>
+
+
+   </head>
+<body>
+	<center>
+<div id ="haha">
+
+	<h1>JS Calculator</h1>
+
+
+
+			<div class="x1">
+		<br><div><label for="num1">Number1</label></div><br>
+
+		<input type="text" id="num1"style="width: 350px;"><br>
+			<!-- <input number="Number1"type="Number1"size="10"> -->
+		</div>
+
+		<div class="x1">
+		<br><div><label for="num2">Number2</label></div><br>
+	<input type="text" id="num2"style="width: 350px">
+			</div>
+		<div class="x1">
+		<br><div><label for="char">Operate way?</label></div><br>
+		<select id="char" name ="char"style="width: 350px;">
+			<option value="+">+</option>
+			<option value="-">-</option>
+			<option value="*">*</option>
+			<option value="/">/</option>
+				
+			
+		</select>
+	</div>
+
+	<div id="add">Add</div>
+	
+	<div>
+		<label id="result">Result = ?</label>
+		
+	</div>
+
+
+	
+
+</div></center>
+	<script>
+		function calculate(num1,num2, char){
+			console.log(char);
+			var resu=0;
+			switch(char){
+				case "+":
+					console.log(resu);
+					resu=add(num1,num2);
+					break;
+				case"-":
+					resu=rid(num1,num2);
+					break;
+				case"*":
+				    resu=ride(num1,num2);
+				    break;
+				case"/":
+					resu=divide(num1,num2);
+					break;
+
+
+
+			}
+			document.getElementById("result").innerText = "Result = "+resu;
+		}
+		function start(){
+			const num1Input=document.getElementById("num1");
+			console.log(num1Input);
+			console.log(typeof(num1Input));
+			const num2Input=document.getElementById("num2");
+			console.log(num2Input);
+			let char=document.getElementById("char");
+			document.getElementById("add").addEventListener("click", ()=>{
+				calculate(parseFloat(num1Input.value), parseFloat(num2Input.value), char.value);
+			});
+		}
+		function add(num1,num2){
+			
+			return num1+num2;
+		}
+		function ridOf(num1,num2){
+			
+			return num1-num2;
+		}
+		function ride(num1,num2){
+			
+			return num1*num2;
+		}
+		function divide(num1,num2){
+			
+			return num1/num2;
+		}
+		window.addEventListener("load",start);
+		// function getResult()
+		// function caucu(){
+		// 	if (getChar="+") {
+
+		// 		return "Result= "+add();
+		// 	}else if (getChar="-") {
+		// 		return "Result= "+ridOf();
+		// 	}else if (getChar="*") {
+		// 		return "Result= "+ride();
+		// 	}else{
+		// 		return "Result= "+divide();
+		// 	}
+		// }
+
+		
+		// function cacu(){
+
+		// 	if(char1="+"){
+		// 		result= num1+num2;
+		// 		document.write(result);
+		// 	}else if (char1="-") {
+		// 		result= num1-num2;
+
+		// 		document.write(result);
+		// 	}else if(char1="*"){
+		// 		result= num1+num2;
+		// 		document.write(result);
+		// 	}else  {
+		// 		result= num1+num2;
+		// 		document.write(result);
+		// 	}	
+
+
+		// }
+		
+		
+
+	</script>
+
+
+</body>
+</html>
